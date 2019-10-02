@@ -9,20 +9,33 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid LostFocus="LostFocus">
-        <Button x:Name="LaunchButton" Content="Go to APOD launch date" Margin="33,59,0,0" VerticalAlignment="Top" Click="LaunchButton_Click"/>
-        <CalendarDatePicker x:Name="MonthCalendar" Margin="33,10,0,0" VerticalAlignment="Top" DateChanged="DateChanged"/>
-        <Grid HorizontalAlignment="Left" Height="196" Margin="33,180,0,0" VerticalAlignment="Top" Width="320" BorderThickness="1,1,1,1" BorderBrush="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="159*"/>
+            <RowDefinition Height="341*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF95FFFF"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="LaunchButton" Content="Go to APOD launch date" Margin="70,220,0,0" VerticalAlignment="Top" Click="LaunchButton_Click" Background="White" BorderBrush="Black"/>
+        <CalendarDatePicker x:Name="MonthCalendar" Margin="70,171,0,0" VerticalAlignment="Top" DateChanged="DateChanged" Background="#66FFFFFF" BorderBrush="Black" Width="320"/>
+        <Grid HorizontalAlignment="Left" Height="178" Margin="70,294,0,0" VerticalAlignment="Top" Width="320" BorderThickness="1,1,1,1" BorderBrush="Black" Background="White" Grid.RowSpan="2">
             <CheckBox x:Name="ShowTodaysImageCheckBox" Content="Show today's image on start up" Margin="31,10,0,0" VerticalAlignment="Top"/>
             <CheckBox x:Name="LimitRangeCheckBox" Content="Limit range to current year" Margin="32,66,0,0" VerticalAlignment="Top" Checked="LimitRangeCheckBox_Checked" Unchecked="LimitRangeCheckBox_Unchecked"/>
             <TextBlock HorizontalAlignment="Left" Margin="33,126,0,0" Text="Images downloaded today:" TextWrapping="Wrap" VerticalAlignment="Top" Height="33"/>
             <TextBox x:Name="ImagesTodayTextBox" HorizontalAlignment="Left" Margin="221,123,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Background="#FFFFFFC0"/>
         </Grid>
-        <TextBlock HorizontalAlignment="Left" Height="21" Margin="33,406,0,0" Text="Image Credit and Copyright:" TextWrapping="Wrap" VerticalAlignment="Top" Width="320"/>
-        <TextBox x:Name="ImageCopyrightTextBox" HorizontalAlignment="Left" Height="59" Margin="33,429,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" IsReadOnly="True" Background="#FFFFFFC0"/>
-        <TextBlock HorizontalAlignment="Left" Margin="34,577,0,0" Text="Description:" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="321"/>
-        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="34,601,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="149" Width="1353" IsReadOnly="True" Background="#66FFFFC0"/>
-        <Border x:Name="PictureBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="478" Margin="423,59,0,0" VerticalAlignment="Top" Width="963">
+        <TextBlock HorizontalAlignment="Left" Height="21" Margin="70,184.4,0,0" Text="Image Credit and Copyright:" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" Grid.Row="1"/>
+        <TextBox x:Name="ImageCopyrightTextBox" HorizontalAlignment="Left" Height="59" Margin="70,207.4,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" IsReadOnly="True" Background="#FFFFFFC0" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="71,291.4,0,0" Text="Description:" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" Width="321" Grid.Row="1"/>
+        <TextBox x:Name="DescriptionTextBox" HorizontalAlignment="Left" Margin="71,315.4,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="149" Width="1353" IsReadOnly="True" Background="#FFFFFFC0" Grid.Row="1"/>
+        <Border x:Name="PictureBorder" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="463" Margin="536,157,0,0" VerticalAlignment="Top" Width="888" Background="White" Grid.RowSpan="2">
             <Image x:Name="ImagePictureBox"/>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="117" Margin="71,30,0,0" VerticalAlignment="Top" Width="1353">
+            <TextBlock Text="NASA's Astronomy Picture of the Day" TextWrapping="Wrap" FontSize="50" FontFamily="Gotham Black" FontWeight="Bold" TextAlignment="Center" Margin="0.2,24.2,0,23" FocusVisualSecondaryBrush="#99FFFFFF"/>
         </Border>
     </Grid>
 </Page>

@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="557c741d-9353-44a2-8ca8-a056e83841ba" Publisher="CN=Aditya Oberai" Version="1.0.0.0" ProcessorArchitecture="x86" />
+  <Identity Name="557c741d-9353-44a2-8ca8-a056e83841ba" Publisher="CN=Aditya Oberai" Version="1.0.1.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="557c741d-9353-44a2-8ca8-a056e83841ba" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>APOD_UWP</DisplayName>
